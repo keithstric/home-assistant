@@ -1,0 +1,36 @@
+platform: template
+sensors:
+  last_motion_location:
+    unique_id: "7cc489dc-dc9d-48e2-a7bc-236d2bbb2f1a"
+    friendly_name: Last Detected Motion Location
+    value_template: >-
+      {% set area = '' %}
+      {% if (is_state('binary_sensor.aarlo_motion_back_porch', 'on')) %}
+        {% set area = 'the Back Porch' %}
+      {% elif (is_state('binary_sensor.aarlo_motion_basement_door', 'on')) %}
+        {% set area = 'the Basement Door' %}
+      {% elif (is_state('binary_sensor.aarlo_motion_drive_way', 'on')) %}
+        {% set area = 'the Driveway' %}
+      {% elif (is_state('binary_sensor.aarlo_motion_shop_door', 'on')) %}
+        {% set area = 'the Shop Door' %}
+      {% elif (is_state('binary_sensor.back_door_motion', 'on')) %}
+        {% set area = 'Betty\'s Back Door' %}
+      {% elif (is_state('binary_sensor.carport_door_motion', 'on')) %}
+        {% set area = 'Betty\'s Carport' %}
+      {% elif (is_state('binary_sensor.front_door_motion', 'on')) %}
+        {% set area = 'the Front Door' %}
+      {% endif %}
+      {{ area }}
+  person_detected_location:
+    unique_id: "e76fc36f-112c-4da6-8ddf-70e9726cb0c0"
+    friendly_name: Person Detected Location
+    value_template: >-
+      {% set area = '' %}
+      {% if (is_state('binary_sensor.back_door_motion', 'on') and state_attr('binary_sensor.back_door_motion', 'personDetected') == true) %}
+        {% set area = 'Betty\'s Back Door' %}
+      {% elif (is_state('binary_sensor.carport_door_motion', 'on') and state_attr('binary_sensor.carport_door_motion', 'personDetected') == true) %}
+        {% set area = 'Betty\'s Carport' %}
+      {% elif (is_state('binary_sensor.front_door_motion', 'on') and state_attr('binary_sensor.front_door_motion', 'personDetected') == true) %}
+        {% set area = 'the Front Door' %}
+      {% endif %}
+      {{ area }}

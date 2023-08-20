@@ -1,0 +1,43 @@
+>
+  {## Motion Detected alexa announcement ##}
+  {%- macro getMotionStatement() -%}
+    {% set prefix = [
+      'Something is mucking about at',
+      'There is motion around',
+      'I detect movement around',
+      'I\'ve noticed motion around',
+      'Something happening at',
+      'Motion detected at',
+      'My sensors have picked up movement around'
+    ]|random %}
+    {% set area = states('sensor.last_motion_location') %}
+    {% set suffix = '' %}
+    {% set personDetectedLocation = states('sensor.person_detected_location') %}
+    {% if (personDetectedLocation != '' and area == personDetectedLocation) %}
+      {% set suffix = 'A person was detected, you need to possibly answer this!' %}
+    {% else %}
+      {% set suffix = [
+        'You should check it out.',
+        'You might want to take a look.',
+        'Check it out.',
+        ''
+      ]|random %}
+    {% endif %}
+    {% if (area != '') %}
+      {{prefix}} {{area}}. {{suffix}}
+    {% endif %}
+  {%- endmacro -%}
+
+  {## a macro that removes all newline characters, empty spaces, and returns formatted text ##}
+  {%- macro cleanup(data) -%}
+    {%- for item in data.split("\n")  if item | trim != "" -%}
+      {{ item | trim }} 
+    {% endfor -%}
+  {%- endmacro -%}
+
+  {%- macro mother_of_all_macros() -%}
+    {{ getMotionStatement() }}
+  {%- endmacro -%}
+
+  {## Call the macro ##}
+  {{- cleanup(mother_of_all_macros()) -}}

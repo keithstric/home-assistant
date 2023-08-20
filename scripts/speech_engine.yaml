@@ -1,0 +1,30 @@
+speech_engine:
+  sequence:
+    # - condition: state
+    #   entity_id: binary_sensor.someone_home
+    #   state: "on"
+    # - condition: time
+    #   before: "23:00:00"
+    #   after: "08:30:00"
+    - service: notify.alexa_media
+      data:
+        message: >
+          <voice name="{{ voice }}">
+          <amazon:auto-breaths>
+          <prosody rate="fast">
+          {{ message }}
+          </prosody>
+          </amazon:auto-breaths>
+          </voice>
+        target: >
+          {% if who in ['living room', 'living_room', 'living'] %}
+            media_player.living_room
+          {% elif who in ['hobby room', 'hobby_room', 'hobby'] %}
+            media_player.pamela_s_echo_dot
+          {% elif who in ['master_bedroom', 'bedroom', 'master bedroom'] %}
+            media_player.bed_room
+          {% else %}
+            media_player.office
+          {% endif %}
+        data:
+          type: tts

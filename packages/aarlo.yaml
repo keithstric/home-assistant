@@ -1,0 +1,57 @@
+frontend:
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
+
+aarlo:
+  host: !secret aarlo-host
+  username: !secret aarlo-user
+  password: !secret aarlo-password
+  backend: sse
+  db_motion_time: 30
+  db_ding_time: 10
+  recent_time: 10
+  last_format: "%m-%d %H:%M"
+  refresh_devices_every: 2
+  verbose_debug: True
+  save_media_to: "/config/media/${N}/${F}/${T}"
+  tfa_source: push
+  tfa_type: PUSH
+  #tfa_retries: 5
+  #tfa_delay: 5
+  #tfa_host: !secret yahoo_email_TFA_host
+  #tfa_username: !secret yahoo_email
+  #tfa_password: !secret yahoo_email_TFA_password
+  #save_session: False
+
+alarm_control_panel:
+  - platform: aarlo
+    home_mode_name: home_mode
+    away_mode_name: armed
+    night_mode_name: night_mode
+
+sensor:
+  - platform: aarlo
+    monitored_conditions:
+      - last_capture
+      - total_cameras
+      - recent_activity
+      - battery_level
+      - captured_today
+      - signal_strength
+
+switch:
+  - platform: aarlo
+    snapshot: True
+
+binary_sensor:
+  - platform: aarlo
+    monitored_conditions:
+      - motion
+      - sound
+      - connectivity
+
+camera:
+  - platform: aarlo
+
+media_player:
+  - platform: aarlo

@@ -1,0 +1,9 @@
+motion_detected:
+  alias: Motion Detected
+  sequence:
+    - service: script.speech_engine
+      data:
+        message: !include ../templates/speech/motion_detected.yaml
+        voice: "{{ states('input_select.jarvis_voice') }}"
+        who: "office"
+  mode: single

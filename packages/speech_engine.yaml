@@ -1,0 +1,8 @@
+input_select:
+  jarvis_voice:
+    name: Speech Voice
+    options:
+      - Amy
+      - Brian
+      - Emma
+    initial: Brian

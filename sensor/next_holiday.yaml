@@ -1,0 +1,5 @@
+platform: next_holiday
+min_future_holidays: 3
+sources:
+  - country: "USA"
+    state: "GA"

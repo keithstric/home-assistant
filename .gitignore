@@ -1,0 +1,10 @@
+secrets.yaml
+
+.storage/
+.cloud/
+.google.token
+.aarlo
+
+# media directories
+media/
+downloads/

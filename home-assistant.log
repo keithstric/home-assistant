@@ -1,0 +1,1916 @@
+2023-08-20 11:37:44.690 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-08-20 11:37:44.690 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration aarlo which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-08-20 11:37:44.691 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration next_holiday which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-08-20 11:37:44.691 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration alexa_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-08-20 11:37:44.692 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration feedparser which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-08-20 11:37:44.692 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration temperature_feels_like which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2023-08-20 11:37:52.837 ERROR (MainThread) [homeassistant.components.sensor] Error adding entities for domain sensor with platform mobile_app
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 510, in async_add_entities
+    await asyncio.gather(*tasks)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 750, in _async_add_entity
+    await entity.add_to_platform_finish()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 1004, in add_to_platform_finish
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+2023-08-20 11:37:52.848 ERROR (MainThread) [homeassistant.components.sensor] Error while setting up mobile_app platform for sensor
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 370, in _async_setup_platform
+    await asyncio.gather(*pending)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 510, in async_add_entities
+    await asyncio.gather(*tasks)
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 750, in _async_add_entity
+    await entity.add_to_platform_finish()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 1004, in add_to_platform_finish
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+2023-08-20 11:37:53.340 WARNING (SyncWorker_4) [pyaarlo] error in new response={'meta': {'code': 400, 'error': 9233, 'message': 'Authentication is not finished yet'}}
+2023-08-20 11:37:53.342 WARNING (SyncWorker_4) [pyaarlo] 2fa finishAuth - tries 1
+2023-08-20 11:37:58.611 WARNING (SyncWorker_4) [pyaarlo] error in new response={'meta': {'code': 400, 'error': 9233, 'message': 'Authentication is not finished yet'}}
+2023-08-20 11:37:58.611 WARNING (SyncWorker_4) [pyaarlo] 2fa finishAuth - tries 2
+2023-08-20 11:38:01.741 WARNING (MainThread) [homeassistant.setup] Setup of aarlo is taking over 10 seconds.
+2023-08-20 11:38:04.257 WARNING (SyncWorker_4) [pyaarlo] error in new response={'meta': {'code': 400, 'error': 9233, 'message': 'Authentication is not finished yet'}}
+2023-08-20 11:38:04.258 WARNING (SyncWorker_4) [pyaarlo] 2fa finishAuth - tries 3
+2023-08-20 11:38:09.517 WARNING (SyncWorker_4) [pyaarlo] error in new response={'meta': {'code': 400, 'error': 9233, 'message': 'Authentication is not finished yet'}}
+2023-08-20 11:38:09.518 WARNING (SyncWorker_4) [pyaarlo] 2fa finishAuth - tries 4
+2023-08-20 11:38:14.770 WARNING (SyncWorker_4) [pyaarlo] error in new response={'meta': {'code': 400, 'error': 9233, 'message': 'Authentication is not finished yet'}}
+2023-08-20 11:38:14.771 WARNING (SyncWorker_4) [pyaarlo] 2fa finishAuth - tries 5
+2023-08-20 11:38:14.772 ERROR (SyncWorker_4) [pyaarlo] 2fa finishAuth failed
+2023-08-20 11:38:14.773 ERROR (SyncWorker_4) [custom_components.aarlo] unable to connect to Arlo: attempt=1,sleep=15,error=2fa finishAuth failed
+2023-08-20 11:38:31.420 WARNING (SyncWorker_4) [pyaarlo] error in new response={'meta': {'code': 400, 'error': 9233, 'message': 'Authentication is not finished yet'}}
+2023-08-20 11:38:31.421 WARNING (SyncWorker_4) [pyaarlo] 2fa finishAuth - tries 1
+2023-08-20 11:53:59.421 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 12:09:37.444 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 12:29:59.540 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 13:06:38.713 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 13:17:33.977 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2023-08-20 13:20:29.054 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 13:31:59.012 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 13:35:53.958 ERROR (MainThread) [homeassistant.components.ipp.coordinator] Error fetching ipp data: Invalid response from API: Error occurred while communicating with IPP server.
+2023-08-20 13:37:24.562 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 14:12:27.722 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 14:12:27.731 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 14:12:27.740 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 14:33:09.881 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 14:43:09.950 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 15:28:10.414 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 15:29:06.245 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 15:44:53.966 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 15:44:53.975 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 15:44:53.984 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 15:51:20.632 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 16:04:26.599 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:15:18.586 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:19:46.271 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:29:44.746 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:34:01.082 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 16:34:09.207 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:34:15.967 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:34:46.660 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:35:26.072 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:49:48.004 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:49:48.092 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:49:48.129 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:49:48.528 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:49:48.567 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:50:01.358 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:51:32.349 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:51:32.402 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:51:32.858 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:51:32.867 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:51:33.082 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 16:51:33.467 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:04:20.907 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:05:06.969 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:06:01.441 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 17:17:41.491 WARNING (MainThread) [homeassistant.components.ring] Error fetching Ring active dings data: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2023-08-20 17:20:22.828 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:24:36.937 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:24:53.965 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:29:36.678 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:29:37.981 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:29:38.145 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:29:38.286 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:29:38.320 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:29:38.651 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:29:38.686 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:31:47.946 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:36:06.532 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 17:54:06.915 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 17:55:56.933 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 17:56:06.930 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 17:59:03.743 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:00:50.339 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:06.146 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:20.578 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:23.457 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:23.989 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:24.145 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:24.269 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:24.531 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:24.571 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:01:50.166 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:06:48.000 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:14:28.903 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:22:22.185 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 18:30:16.870 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 18:36:02.315 WARNING (MainThread) [homeassistant.components.automation.notify_alexa_motion_detected] Notify Alexa Motion Detected: Already running
+2023-08-20 18:45:17.427 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:00:17.882 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:09:24.529 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:49.444 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:50.981 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:51.160 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:51.200 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:52.975 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:56.400 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:56.555 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:56.627 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:56.634 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:56.996 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:12:57.030 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+
+2023-08-20 19:15:25.644 ERROR (MainThread) [homeassistant.util.logging] Exception in _handle_update when dispatching 'mobile_app_sensor_update': ('29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952_high_accuracy_update_interval', {'unique_id': 'high_accuracy_update_interval', 'state': '', 'type': 'sensor', 'icon': 'mdi:timer', 'attributes': {}, 'webhook_id': '29fb2024e6b9aa8bdb4660ccca7479af7793667cf8babab5a461d744cad77952'})
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 591, in state
+    numerical_value = int(value)
+                      ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/mobile_app/entity.py", line 105, in _handle_update
+    self.async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 746, in async_write_ha_state
+    self._async_write_ha_state()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 808, in _async_write_ha_state
+    state = self._stringify_state(available)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 752, in _stringify_state
+    if (state := self.state) is None:
+                 ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/sensor/__init__.py", line 595, in state
+    raise ValueError(
+ValueError: Sensor sensor.pixel_6_high_accuracy_update_interval has device class 'None', state class 'None' unit 'seconds' and suggested precision 'None' thus indicating it has a numeric value; however, it has the non-numeric value: '' (<class 'str'>)
+

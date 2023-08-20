@@ -1,0 +1,44 @@
+homeassistant:
+  external_url: !secret external_url
+  internal_url: !secret internal_url
+  packages: !include_dir_named packages
+  media_dirs:
+    local: /config/media
+    download: /config/downloads
+
+# Add Prometheus integration
+prometheus:
+  namespace: HomeAssistant
+  filter:
+    exclude_entity_globs:
+      - sensor.weather_*
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Remote access via stricknet.duckdns.org or homeassistant.home.
+# Support forwarded requests
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: !secret proxy_ips
+
+# Put Home Assistant into Alexa
+api:
+alexa:
+  smart_home:
+
+downloader:
+  download_dir: downloads
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include_dir_list scripts
+scene: !include scenes.yaml
+sensor: !include_dir_list sensor
