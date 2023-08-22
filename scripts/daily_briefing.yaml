@@ -1,0 +1,9 @@
+daily_briefing:
+  alias: Daily Briefing Script
+  sequence:
+    - service: script.speech_engine
+      data:
+        message: !include ../templates/speech/briefing.yaml
+        voice: "{{ states('input_select.jarvis_voice') }}"
+        who: "office"
+  mode: single

@@ -3,8 +3,8 @@ homeassistant:
   internal_url: !secret internal_url
   packages: !include_dir_named packages
   media_dirs:
-    local: /config/media
-    download: /config/downloads
+    local: /media/media
+    download: /media/downloads
 
 # Add Prometheus integration
 prometheus:
@@ -32,7 +32,7 @@ alexa:
   smart_home:
 
 downloader:
-  download_dir: downloads
+  download_dir: /media/downloads
 
 # Load frontend themes from the themes folder
 frontend:

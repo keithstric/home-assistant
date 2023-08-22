@@ -44,7 +44,7 @@
       entity_id: switch.foyer_shelly_switch_channel_1
   - delay:
       hours: 0
-      minutes: 20
+      minutes: 10
       seconds: 0
       milliseconds: 0
   - service: switch.turn_off
@@ -114,10 +114,162 @@
   trigger:
   - platform: time
     at: '23:00:00'
-  condition: []
+  condition:
+  - condition: state
+    entity_id: switch.foyer_shelly_switch_channel_1
+    state: 'on'
   action:
   - service: switch.turn_off
     data: {}
     target:
       entity_id: switch.foyer_shelly_switch_channel_1
+  mode: single
+- id: '1692708526634'
+  alias: Set Afternoon
+  description: ''
+  trigger:
+  - platform: time
+    at: '12:00:00'
+  condition:
+  - condition: and
+    conditions:
+    - condition: time
+      after: '11:59:00'
+      before: '18:00:00'
+  action:
+  - service: input_text.set_value
+    data:
+      value: Good Afternoon,
+    target:
+      entity_id: input_text.current_greeting
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.afternoon
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.early_morning
+      - input_boolean.evening
+      - input_boolean.morning
+  mode: single
+- id: '1692708590608'
+  alias: Set Morning
+  description: ''
+  trigger:
+  - platform: time
+    at: 06:00:00
+  condition:
+  - condition: and
+    conditions:
+    - condition: time
+      after: 05:59:00
+      before: '12:00:00'
+  action:
+  - service: input_text.set_value
+    data:
+      value: Good Morning,
+    target:
+      entity_id: input_text.current_greeting
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.morning
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.early_morning
+      - input_boolean.evening
+      - input_boolean.afternoon
+  mode: single
+- id: '1692708658258'
+  alias: Set Early Morning
+  description: ''
+  trigger:
+  - platform: time
+    at: 00:00:00
+  condition:
+  - condition: and
+    conditions:
+    - condition: time
+      before: 06:00:00
+      after: '23:59:00'
+  action:
+  - service: input_text.set_value
+    data:
+      value: Good early morning,
+    target:
+      entity_id: input_text.current_greeting
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.early_morning
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.evening
+      - input_boolean.morning
+      - input_boolean.afternoon
+  mode: single
+- id: '1692708716970'
+  alias: Set Evening
+  description: ''
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition:
+  - condition: and
+    conditions:
+    - condition: time
+      after: '17:59:00'
+      before: 00:00:00
+  action:
+  - service: input_text.set_value
+    data:
+      value: Good Evening,
+    target:
+      entity_id: input_text.current_greeting
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.evening
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.early_morning
+      - input_boolean.afternoon
+      - input_boolean.morning
+  mode: single
+- id: '1692713537275'
+  alias: Play Daily Briefing
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - switch.office_light_socket_1
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: and
+    conditions:
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: input_boolean.morning
+        state: 'on'
+      - condition: state
+        entity_id: input_boolean.afternoon
+        state: 'on'
+    - condition: state
+      entity_id: input_boolean.daily_briefing_done
+      state: 'off'
+  action:
+  - service: script.daily_briefing
+    data: {}
+  - service: input_boolean.turn_on
+    data: {}
   mode: single

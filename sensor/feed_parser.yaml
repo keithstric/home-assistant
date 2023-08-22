@@ -1,0 +1,7 @@
+platform: feedparser
+name: Engineering Feed
+feed_url: "https://www.brainyquote.com/link/quotebr.rss"
+date_format: "%a, %d %b %Y %H:%M:%S %Z"
+show_topn: 5
+scan_interval:
+  hours: 3

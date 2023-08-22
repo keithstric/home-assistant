@@ -1,0 +1,61 @@
+platform: template
+sensors:
+  weather_condition_today:
+    value_template: >-
+      {% if is_state('weather.forecast_home', 'sunny') %}
+        {% if is_state('sun.sun', 'above_horizon') %}
+          {{ [
+            'and sunny',
+            'with sun'
+          ] | random }}
+        {% else %}
+          {{ [
+            'and clear',
+            'with clear skies'
+          ] | random }}
+        {% endif %}
+      {% elif is_state('weather.forcast_home', 'partlycloudy') %}
+        {{ [
+          'with some clouds', 
+          'with partly cloudy skies',
+          'with scattered clouds'
+        ] | random }}
+      {% elif is_state('weather.forcast_home', 'cloudy') %}
+        {{ [
+          'with clouds', 
+          'with cloudy skies'
+        ] | random }}
+      {% elif is_state('weather.forcast_home', 'rainy') %}
+        {{ [
+          'with rain', 
+          'with showers'
+        ] | random }}
+      {% elif is_state('weather.forcast_home', 'windy') %}
+        {{ states.weather.home.state }}
+      {% endif %}
+  weather_high_temp_today:
+    value_template: >-
+      {% set forecast = state_attr('weather.forecast_home_hourly', 'forecast') %}
+      {% set ns = namespace (highTemp = 0) %}
+      {% for hourForecast in forecast %}
+        {% if (hourForecast.temperature > ns.highTemp) %}
+          {% set ns.highTemp = hourForecast.temperature | round %}
+        {% endif %}
+      {% endfor %}
+      {{ ns.highTemp }}
+  weather_humidity_today:
+    value_template: >-
+      {{state_attr('weather.forecast_home', 'humidity')}}
+  weather_humidity_feels_like:
+    value_template: >-
+      {% set humidityFeelsLike = '' %}
+      {% if (int(states('sensor.weather_humidity_today')) > 70 and int(states('sensor.weather_high_temp_today')) > 79) %}
+        {% set humidityFeelsLike = [
+          'and sticky',
+          'like walking into a can of soup',
+          'air will be wishing it was water',
+          'and would be perfect weather for a salamander',
+          'and will be a frizzy hair day'
+        ]|random %}
+      {% endif %}
+      {{ humidityFeelsLike }}

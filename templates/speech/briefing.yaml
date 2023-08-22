@@ -1,0 +1,61 @@
+>
+  {## Daily Briefing ##}
+  {%- macro getGreeting() -%}
+      {{states('input_text.current_greeting')}}
+    {% if is_state('input_boolean.morning','on') %} 
+      Today is {{states('sensor.day_of_week')}}, {{ as_timestamp(now()) | timestamp_custom('%B %d %Y') }}.
+    {% else %}
+      It is {{ now().strftime("%I:%M %p") }}.
+    {% endif %}
+  {%- endmacro -%}
+
+  {%- macro getHoliday() -%}
+    {% if state_attr('sensor.next_holiday', 'today_is_holiday') %}
+      It is {{states('sensor.next_holiday')}} today.
+    {% endif %}
+  {%- endmacro -%}
+
+  {%- macro getWeatherReport() -%}
+    The weather in Douglasville is {{state_attr('weather.forecast_home', 'temperature')|round}} degrees. 
+    Today's low will be {{state_attr('weather.forecast_home', 'forecast')[0].templow|round}} with a high of {{states('sensor.weather_high_temp_today')}} 
+    {{states('sensor.weather_humidity_feels_like')}}
+    {{states('sensor.weather_condition_today')}}.
+  {%- endmacro -%}
+
+  {%- macro getSecurityReport() -%}
+    There were {{states('sensor.aarlo_captured_today_basement_door')}} motion alerts on the basement door, {{states('sensor.aarlo_captured_today_drive_way')}} motion alerts in the driveway and {{states('sensor.aarlo_captured_today_shop_door')}} in the back yard.
+  {%- endmacro -%}
+
+  {%- macro getInternetStatus() -%}
+    {% if (states('sensor.speedtest_download')|round < 100)%}
+      {{ [
+        'It appears the internet is slow today',
+        'Uh oh, gonna be a slow internet day',
+        'Seems the internet may be slow today'
+      ]|random }}
+    {% endif %}
+  {%- endmacro -%}
+
+  {%- macro getInspirationalQuote() %}
+    Today's inspirational quote: {{states('sensor.inspirational_quote')}}
+  {%- endmacro -%}
+
+  {## a macro that removes all newline characters, empty spaces, and returns formatted text ##}
+  {%- macro cleanup(data) -%}
+    {%- for item in data.split("\n")  if item | trim != "" -%}
+      {{ item | trim }} 
+    {% endfor -%}
+  {%- endmacro -%}
+
+  {## a macro to call all macros :)  ##}
+  {%- macro mother_of_all_macros() -%}
+    {{ getGreeting() }}
+    {{ getHoliday() }}
+    {{ getWeatherReport() }}
+    {{ getSecurityReport() }}
+    {{ getInternetStatus() }}
+    {{ getInspirationalQuote() }}
+  {%- endmacro -%}
+    
+  {## Call the macro  ##}
+  {{- cleanup(mother_of_all_macros()) -}}

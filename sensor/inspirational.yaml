@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  inspirational_quote:
+    value_template: >-
+      {{ (state_attr('sensor.engineering_feed', 'entries')|random).summary }}
